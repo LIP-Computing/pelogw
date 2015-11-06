@@ -40,7 +40,7 @@ if __name__ == '__main__':
     # The scp will have to be remodeled, for now just scp
     sub_host = os.environ[param['global']['sub_host']]
     sub_workdir = os.environ[param['global']['sub_workdir']]
-    std_in = os.environ['SGEIN1']
+    std_in = sub_workdir + os.sep + os.environ['SGEIN1']
     exec_job = os.environ[param['global']['job_script']]
 
     print '----------- Several things ----------'
