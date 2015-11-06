@@ -40,7 +40,7 @@ if __name__ == '__main__':
     # The scp will have to be remodeled, for now just scp
     sub_host = os.environ[param['global']['sub_host']]
     sub_workdir = os.environ[param['global']['sub_workdir']]
-    # job_scrt = os.environ[param['global']['job_script']]
+    std_in = os.environ['SGEIN1']
     exec_job = os.environ[param['global']['job_script']]
 
     print '----------- Several things ----------'
@@ -51,9 +51,7 @@ if __name__ == '__main__':
     print 'Exec script: %s' % exec_job
     print '-----------------------------------'
 
-    # os.system('scp -r -q %s:%s %s' % (sub_host, job_scrt, comp_workdir))
-    print 'NOW IN cat exec script'
-    os.system('cat %s' % exec_job)
+    os.system('scp -r -q %s:%s %s' % (sub_host, std_in, comp_workdir))
     os.system(exec_job)
 
     print '==========================================='
