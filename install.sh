@@ -35,6 +35,6 @@ else
     cp ${sourcedir}/etc/cont-batch.conf ${ETC}/cont-batch.conf
 fi
 
-cp ${sourcedir}/sec/*.py ${basedir}/exec/
+cp ${sourcedir}/src/*.py ${basedir}/exec/
 chmod 755 ${basedir}/exec/*.py
 
