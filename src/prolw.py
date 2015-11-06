@@ -52,6 +52,8 @@ if __name__ == '__main__':
     print '-----------------------------------'
 
     # os.system('scp -r -q %s:%s %s' % (sub_host, job_scrt, comp_workdir))
+    print 'NOW IN cat exec script'
+    os.system('cat %s' % exec_job)
     os.system(exec_job)
 
     print '==========================================='
