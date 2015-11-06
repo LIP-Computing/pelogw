@@ -27,6 +27,7 @@ if __name__ == '__main__':
     comp_home = os.environ[param['global']['comp_home']]
     job_id = os.environ[param['global']['job_id']]
     # comp_workdir = comp_home + os.sep + 'job_' + job_id
+    comp_workdir = comp_home
 
     '''
     try:
